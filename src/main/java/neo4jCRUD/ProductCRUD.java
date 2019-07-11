@@ -46,8 +46,7 @@ public class ProductCRUD {
         }
 	}
 	
-	public static List<Product> getProducten(final String key) throws Exception{
-	    Neo4jConnectionExample conn = new Neo4jConnectionExample();
+	public static List<Product> getProducten(Neo4jConnection conn, final String key) throws Exception{
 		Driver driver = conn.driver;
 		try ( Session session = driver.session() )
         {
