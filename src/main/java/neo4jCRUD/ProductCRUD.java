@@ -106,8 +106,9 @@ public class ProductCRUD {
 				System.out.println(p1.get("key").toString()+" "+p2.get("key").toString()+" "+ aantal.asInt());
 
 				ProductPaarExtension productPaar = new ProductPaarExtension();
-				productPaar.firstProductKey = r.get(0).get("key").toString();
-				productPaar.otherProductKey = r.get(1).get("key").toString();
+				//replaceAll is nodig omdat format in "text" ipv text terugkomt. Geen idee waarom.
+				productPaar.firstProductKey = r.get(0).get("key").toString().replaceAll("\"", "");;
+				productPaar.otherProductKey = r.get(1).get("key").toString().replaceAll("\"", "");;
 				productPaar.aantal = r.get(2).asInt();
 				productPaar.sortKlantenAlphabetical();
 			    productParen.put(productPaar.firstProductKey+productPaar.otherProductKey+"",productPaar);

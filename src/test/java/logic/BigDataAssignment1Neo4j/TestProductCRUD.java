@@ -33,7 +33,7 @@ public class TestProductCRUD {
 	public void testSelectMostBoughtProductPairs(){
 		List<ProductPaar> productParen = ProductCRUD.selectMostBoughtProductPairs(conn);
 		assertEquals(productParen.get(0).firstProductKey, "eend");
-		assertEquals(productParen.get(0).otherProductKey, "kaas");
+		assertEquals(productParen.get(0).otherProductKey, "product0");
 		//in mysql is het schaap met eend, komt omdat er 3 zijn die 5 (grootste) zijn.
 		//hier is de lijst gesorteerd, schaap met eend staat 3de (ook met 5 aantal).
 		assertEquals(productParen.get(0).aantal, 5);

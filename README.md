@@ -1,1 +1,0 @@
-# BigDataAssignment1Neo4j
